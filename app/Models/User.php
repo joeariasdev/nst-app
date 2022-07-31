@@ -48,7 +48,7 @@ class User extends Authenticatable
         return $this->belongsToMany(Role::class)->withTimestamps();
     }
 
-    public function havePermission($permissionId): bool
+    public function havePermission($permissionSlug): bool
     {
         foreach ($this->roles as $role) {
 
@@ -57,7 +57,7 @@ class User extends Authenticatable
             }
 
             foreach ($role->permissions as $permission) {
-                if ($permission->id == $permissionId) {
+                if ($permission->slug == $permissionSlug) {
                     return true;
                 }
             }

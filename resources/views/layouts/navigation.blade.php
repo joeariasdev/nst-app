@@ -25,6 +25,13 @@
                         {{ __('Users') }}
                     </x-nav-link>
                 </div>
+
+                <!-- Clients Link -->
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('client.index')" :active="request()->routeIs('client.*')">
+                        {{ __('Clients') }}
+                    </x-nav-link>
+                </div>
             </div>
 
             <!-- Settings Dropdown -->

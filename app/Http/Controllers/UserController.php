@@ -97,7 +97,7 @@ class UserController extends Controller
         }
     }
 
-    public function destroy(int $id)
+    public function destroy(int $id): RedirectResponse
     {
         Gate::authorize('have_access', Permission::USER_DESTROY_SLUG);
         $response = $this->userInterface->deleteUser($id);

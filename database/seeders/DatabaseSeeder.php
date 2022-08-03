@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Client;
+use App\Models\Subsidiary;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -22,5 +24,7 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         $this->call(UserRolePermissionSeeder::class);
+        Subsidiary::factory(5)->create();
+        Client::factory(30)->create();
     }
 }

@@ -10,7 +10,7 @@
     <div class="py-8">
         <div class="flex justify-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col">
-                <div class="w-full">
+                <div class="w-auto">
                     <label for="client-table-search" class="sr-only">Search</label>
                     <div class="flex flex-wrap justify-between items-center">
                         <form method="GET">
@@ -24,7 +24,7 @@
                         <a href="{{ route('client.create') }}" class="text-white bg-indigo-600 hover:bg-indigo-800 focus:outline-none focus:ring-4 focus:ring-indigo-300 font-medium rounded-full text-sm px-5 py-2.5 text-center dark:bg-indigo-600 dark:hover:bg-indigo-700 dark:focus:ring-indigo-800">Add Client</a>
                     </div>
                     <div class="border-b border-gray-200 shadow mt-4">
-                        <table>
+                        <table class="table-auto">
                             <thead class="bg-gray-50">
                             <tr>
                                 <th class="px-6 py-2 text-xs text-gray-500">
@@ -64,15 +64,15 @@
                                         {{ $client->name}}
                                     </td>
                                     <td class="px-6 py-4 text-sm text-gray-500">
-                                        {{ $client->address }}
+                                        {{ Str::limit($client->address, 20)}}
                                     </td>
 
                                     <td class="px-6 py-4 text-sm text-gray-500">
-                                        {{ $client->email}}
+                                        {{ $client->email }}
                                     </td>
                                     <td class="px-6 py-4">
                                         <div class="text-sm text-gray-500">
-                                            {{ $client->phone_number}}
+                                            {{ $client->phone_number }}
                                         </div>
                                     </td>
                                     <td class="px-6 py-4">

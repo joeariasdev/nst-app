@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ClientController;
+use App\Http\Controllers\DeviceController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -26,5 +27,7 @@ Route::get('/dashboard', function () {
 Route::resource('/user', UserController::class)->middleware(['auth']);
 
 Route::resource('/client', ClientController::class)->middleware(['auth']);
+
+Route::resource('/device', DeviceController::class)->middleware(['auth']);
 
 require __DIR__ . '/auth.php';

@@ -72,7 +72,7 @@ class ClientRepository implements ClientInterface
             // Then update the client
             // Else create the new one.
 
-            $client = $id ? $this->client->findOrFail($id) : new Client();
+            $client = $id ? $this->client->findOrFail($id) : new Client;
             $client->identification = $request->identification;
             $client->name = $request->name;
             $client->address = $request->address;

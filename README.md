@@ -63,7 +63,7 @@ Por último para ejecutar la aplicación haremos uso de dos comandos, uno para c
 npm run dev
 ```
 
-- En la terminal 1
+- En la terminal 2
 
 ```sh
 php artisan serve

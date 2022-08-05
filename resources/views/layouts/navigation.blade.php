@@ -39,6 +39,13 @@
                         {{ __('Devices') }}
                     </x-nav-link>
                 </div>
+
+                <!-- Orders Link -->
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('order.index')" :active="request()->routeIs('order.*')">
+                        {{ __('Orders') }}
+                    </x-nav-link>
+                </div>
             </div>
 
             <!-- Settings Dropdown -->

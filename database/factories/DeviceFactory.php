@@ -22,7 +22,7 @@ class DeviceFactory extends Factory
             'type' => $this->faker->randomElement([Device::HDD, Device::SSD]),
             'serial' => $this->faker->unique()->creditCardNumber(),
             'description' => $this->faker->text(100),
-            'client_id' => Client::all()->random()->id,
+            'client_id' => Client::first(),
         ];
     }
 }
